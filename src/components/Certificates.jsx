@@ -1,27 +1,38 @@
-import { Award, ExternalLink } from 'lucide-react';
+import { Award, ExternalLink } from "lucide-react";
 
 const Certificates = () => {
   const certificates = [
     {
-      title: 'Web Development Internship Certificate',
-      issuer: 'Unified Mentor',
-      date: 'Dec 2024',
-      description: 'Successfully completed a comprehensive web development internship focusing on frontend and real-time application development.',
-      skills: ['React', 'Socket.IO', 'Frontend Development', 'Real-time Applications'],
+      title: "Web Development Internship Certificate",
+      issuer: "Unified Mentor",
+      date: "Dec 2024",
+      description:
+        "Successfully completed a comprehensive web development internship focusing on frontend and real-time application development.",
+      skills: [
+        "React",
+        "Socket.IO",
+        "Frontend Development",
+        "Real-time Applications",
+      ],
+      link: "https://drive.google.com/file/d/1SWFhaWJxk7Kc3GSSPFktoYFJ3wHtEAP1/view",
     },
     {
-      title: 'Frontend Technology Certificate',
-      issuer: 'Cutshort',
-      date: '2024',
-      description: 'Certification in frontend technologies demonstrating proficiency in modern web development practices.',
-      skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Responsive Design'],
+      title: "Frontend Technology Certificate",
+      issuer: "Cutshort",
+      date: "2024",
+      description:
+        "Certification in frontend technologies demonstrating proficiency in modern web development practices.",
+      skills: ["HTML", "CSS", "JavaScript", "React", "Responsive Design"],
+      link: "https://drive.google.com/drive/folders/15Hlj04fJ0Qa7pJovt23cH9V4jSEbX4ku",
     },
     {
-      title: 'Frontend Technology Certificate',
-      issuer: 'Great Learning Institute',
-      date: '2024',
-      description: 'Advanced certification in frontend development covering industry-standard tools and frameworks.',
-      skills: ['Web Development', 'UI/UX', 'Modern Frameworks'],
+      title: "Frontend Technology Certificate",
+      issuer: "Great Learning Institute",
+      date: "2024",
+      description:
+        "Advanced certification in frontend development covering industry-standard tools and frameworks.",
+      skills: ["Web Development", "UI/UX", "Modern Frameworks"],
+      link: "https://drive.google.com/drive/folders/15Hlj04fJ0Qa7pJovt23cH9V4jSEbX4ku",
     },
   ];
 
@@ -44,16 +55,22 @@ const Certificates = () => {
               key={index}
               className="group bg-slate-900/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 transform hover:-translate-y-2"
             >
-              <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 p-6 border-b border-slate-700">
+              <div className="bg-linear-to-br from-cyan-500/20 to-blue-500/20 p-6 border-b border-slate-700">
                 <div className="flex items-center justify-between mb-4">
                   <Award className="w-12 h-12 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
-                  <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                  {
+                    <a href={cert.link} target="_blank">
+                      <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                    </a>
+                  }
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   {cert.title}
                 </h3>
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-cyan-400 font-semibold">{cert.issuer}</span>
+                  <span className="text-cyan-400 font-semibold">
+                    {cert.issuer}
+                  </span>
                   <span className="text-gray-400">{cert.date}</span>
                 </div>
               </div>
@@ -81,7 +98,11 @@ const Certificates = () => {
         <div className="mt-12 text-center">
           <div className="inline-block bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
             <p className="text-gray-300">
-              <span className="text-cyan-400 font-semibold">Commitment to Learning:</span> Continuously updating skills through certifications and hands-on projects
+              <span className="text-cyan-400 font-semibold">
+                Commitment to Learning:
+              </span>{" "}
+              Continuously updating skills through certifications and hands-on
+              projects
             </p>
           </div>
         </div>
