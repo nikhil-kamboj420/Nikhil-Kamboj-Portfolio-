@@ -47,7 +47,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+    <section id="contact" className="py-20 bg-linear-to-b from-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">
@@ -114,7 +114,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-xl p-6 border border-cyan-500/20">
+            <div className="bg-linear-to-br from-cyan-500/10 to-blue-500/10 rounded-xl p-6 border border-cyan-500/20">
               <h3 className="text-xl font-bold text-white mb-3">Looking for opportunities!</h3>
               <p className="text-gray-300 leading-relaxed">
                 I'm currently seeking internship and full-time opportunities where I can contribute my skills

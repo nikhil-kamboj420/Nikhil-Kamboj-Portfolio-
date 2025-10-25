@@ -30,16 +30,16 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="absolute inset-0 bg-linear-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNiIgc3Ryb2tlPSJyZ2JhKDYsIDE4MiwgMjEyLCAwLjEpIi8+PC9nPjwvc3ZnPg==')] opacity-20"></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
-          <div className="mb-8 animate-fade-in">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4">
+          <div className="lg:mb-8 animate-fade-in">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold md:mb-4 mt-11">
               <span className="inline-block animate-bounce-slow">Hi, I'm</span>{' '}
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text animate-gradient">
+              <span className="bg-linear-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text animate-gradient">
                 Nikhil Kamboj
               </span>
             </h1>
@@ -51,7 +51,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 animate-slide-up">
+          <p className="text-[1rem] sm:text-[.8rem] md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 animate-slide-up">
             Building scalable web applications with React, Node.js, Express, and MongoDB.
             Passionate about creating seamless user experiences and solving complex problems.
           </p>
@@ -68,6 +68,14 @@ const Hero = () => {
               className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
             >
               View Projects
+            </a>
+            <a
+              href="./Nikhil_Kamboj_Resume.pdf"
+              target='_blank'
+              type='pdf/application'
+              className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+            >
+              View Resume
             </a>
           </div>
 
