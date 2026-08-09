@@ -13,50 +13,47 @@
 
 ## ✨ Overview
 
-Welcome to my personal portfolio website! This is a modern, responsive, and visually stunning portfolio built with the MERN stack, showcasing my journey as a MERN Stack Developer. The portfolio features a sleek dark theme with cyan accents, smooth animations, and an intuitive user experience.
+A premium, responsive developer portfolio showcasing my work as a MERN Stack Developer. Built with React 19, Vite, and Tailwind CSS, featuring smooth animations, dark/light theme toggle, and a clean modern design.
 
 ## 🎯 Features
 
 ### 🌟 Core Features
 - **Responsive Design**: Fully responsive across all devices (mobile, tablet, desktop)
-- **Dark Theme**: Modern dark slate theme with cyan/blue accent colors
-- **Smooth Animations**: CSS animations and transitions for enhanced user experience
-- **Loading Screen**: Elegant loading animation on initial page load
-- **Single Page Application**: Fast navigation with React Router-like smooth scrolling
+- **Dark/Light Theme**: Toggle between dark and light modes with persisted preference
+- **Smooth Animations**: GSAP and CSS animations for enhanced user experience
+- **No Loading Screen**: Instant page load with proper error handling
+- **Clean Architecture**: Modular component structure with reusable building blocks
 
 ### 📱 Sections
-- **Hero Section**: Dynamic typewriter effect showcasing multiple roles
-- **About Me**: Personal introduction with key highlights and profile image
-- **Skills**: Comprehensive skill breakdown with progress bars
-- **Projects**: Featured projects with live demos and GitHub links
-- **Experience**: Professional work experience timeline
-- **Education**: Academic background and achievements
-- **Certificates**: Professional certifications and achievements
-- **Contact**: Contact form with social media links
-- **Footer**: Quick links and social connections
-
-### 🎨 UI/UX Features
-- **Glassmorphism Effects**: Modern backdrop blur effects
-- **Hover Animations**: Interactive elements with scale and color transitions
-- **Gradient Backgrounds**: Beautiful gradient overlays and backgrounds
-- **Typography**: Clean, readable typography with proper hierarchy
-- **Icon Integration**: Lucide React icons for visual enhancement
+- **Hero Section**: Dynamic typewriter effect showcasing developer roles
+- **About**: Personal introduction highlighting MERN expertise
+- **Skills**: Organized technology showcase without fake percentages
+- **Projects**: Real projects with verified GitHub links and live demos
+- **DSA**: LeetCode problem-solving achievements (128+ problems in Java)
+- **Experience**: Professional internship experience at Unified Mentor
+- **Achievements**: Verified badges and certifications
+- **Contact**: Working contact form with Web3Forms integration
 
 ## 🛠️ Tech Stack
 
 ### Frontend
-- **React 19.2.0** - Modern React with latest features
+- **React 19.2.0** - Modern React with concurrent features
 - **Tailwind CSS 4.1.16** - Utility-first CSS framework
 - **Lucide React 0.547.0** - Beautiful icon library
-- **Vite** - Fast build tool and development server
+- **Vite 7.1.12** - Fast build tool and development server
 
-### Backend & Database
-- **Supabase** - Backend-as-a-Service for potential future features
+### State Management
+- **TanStack Query** - Server state management and caching
+- **React Context** - Theme state management
 
-### Development Tools
-- **ESLint** - Code linting and formatting
-- **PostCSS** - CSS processing
-- **Autoprefixer** - CSS vendor prefixing
+### Animation
+- **GSAP** - Animation library for complex animations
+
+### HTTP Client
+- **Axios** - API communication
+
+### Deployment
+- Optimized for **Vercel** deployment
 
 ## 🚀 Getting Started
 
@@ -68,8 +65,8 @@ Welcome to my personal portfolio website! This is a modern, responsive, and visu
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/nikhil-kamboj420/nikhil-kamboj-latest-portfolio.git
-   cd nikhil-kamboj-latest-portfolio
+   git clone https://github.com/nikhil-kamboj420/Nikhil-Kamboj-Portfolio-.git
+   cd Nikhil-Kamboj-Portfolio-
    ```
 
 2. **Install dependencies**
@@ -95,62 +92,60 @@ Welcome to my personal portfolio website! This is a modern, responsive, and visu
 ## 📁 Project Structure
 
 ```
-nikhil-kamboj-latest-portfolio/
+nikhil-kamboj-portfolio/
 ├── public/
-│   └── myimage.JPEG          # Profile image
+│   └── Nikhil_Kamboj_Resume.pdf
 ├── src/
 │   ├── components/
-│   │   ├── Hero.jsx         # Hero section with typewriter effect
-│   │   ├── About.jsx        # About me section
-│   │   ├── Skills.jsx       # Skills showcase
-│   │   ├── Projects.jsx     # Featured projects
-│   │   ├── Experience.jsx   # Work experience
-│   │   ├── Education.jsx    # Education background
-│   │   ├── Certificates.jsx # Certifications
-│   │   ├── Contact.jsx      # Contact form
-│   │   ├── Footer.jsx       # Footer component
-│   │   └── Navbar.jsx       # Navigation bar
-│   ├── App.jsx              # Main app component
-│   ├── main.jsx             # App entry point
-│   └── index.css            # Global styles
-├── index.html               # HTML template
-├── package.json             # Dependencies and scripts
-├── vite.config.js           # Vite configuration
-├── tailwind.config.js       # Tailwind CSS config
-├── postcss.config.js        # PostCSS configuration
-└── README.md                # Project documentation
+│   │   ├── About.jsx         # About section
+│   │   ├── Achievements.jsx  # Achievements section
+│   │   ├── Contact.jsx     # Contact form
+│   │   ├── DSA.jsx           # DSA/problem solving section
+│   │   ├── Education.jsx     # Education timeline
+│   │   ├── Experience.jsx    # Work experience
+│   │   ├── Footer.jsx        # Footer component
+│   │   ├── Hero.jsx          # Hero section
+│   │   ├── Navbar.jsx        # Navigation bar
+│   │   ├── Projects.jsx      # Projects showcase
+│   │   ├── Skills.jsx        # Skills display
+│   │   └── ThemeToggle.jsx   # Theme toggle button
+│   ├── utils/
+│   │   └── theme.js          # Theme management
+│   ├── App.jsx               # Main app component
+│   ├── main.jsx              # App entry point
+│   └── index.css             # Global styles
+├── index.html                # HTML template with SEO
+├── package.json              # Dependencies and scripts
+├── vite.config.js            # Vite configuration
+└── tailwind.config.js        # Tailwind CSS config
 ```
 
 ## 🎨 Design Highlights
 
 ### Color Scheme
-- **Primary**: Slate-900 (background)
-- **Secondary**: Cyan-400/500 (accents)
-- **Text**: White (primary), Gray-300/400 (secondary)
+- **Dark Mode**: #0a0a0a background with cyan/blue accents
+- **Light Mode**: Light slate background with proper contrast
+- **Accent**: Cyan (#06b6d4) to Blue (#3b82f6) gradient
 
 ### Typography
-- **Font Family**: System fonts for optimal performance
-- **Headings**: Bold, large text for hierarchy
-- **Body**: Clean, readable text with proper line spacing
-
-### Animations
-- **Typewriter Effect**: Dynamic role display in hero section
-- **Fade In**: Smooth content appearance
-- **Hover Effects**: Interactive scaling and color transitions
-- **Loading Spinner**: Elegant loading animation
+- **Font**: Inter (system fonts fallback)
+- **Headings**: Bold hierarchy with gradient text effects
+- **Body**: Clean, readable text with proper spacing
 
 ## 🌟 Key Projects Featured
 
 ### 1. HaveaTalk
-- **Full-stack real-time collaboration platform**
-- **Tech**: MongoDB, Express.js, React, Node.js, Socket.IO
-- **Features**: Authentication, chat, video calls, screen sharing
-- **Scale**: 4000+ lines of code, built in 20-25 days
+- **Real-time chat & video calling platform**
+- **Tech**: MongoDB, Express.js, React, Node.js, Stream Chat, Stream Video, JWT, Google Gemini
+- **Features**: Authentication, real-time chat, audio/video calls, screen sharing, AI chatbot
+- **Live Demo**: https://haveatalk.onrender.com
+- **GitHub**: https://github.com/nikhil-kamboj420/haveatalk
 
 ### 2. SwiftCountries
-- **React-based country data application**
+- **Country data viewer**
 - **Tech**: React, Tailwind CSS, REST API
 - **Features**: Advanced search, filtering, responsive design
+- **Live Demo**: https://swiftcountries.vercel.app/
 
 ### 3. Kamboj Store
 - **E-commerce website**
@@ -159,24 +154,30 @@ nikhil-kamboj-latest-portfolio/
 
 ## 📞 Contact Information
 
-- **Email**: kambojnikhil44@gmail.com
+- **Email**: [kambojnikhil44@gmail.com](mailto:kambojnikhil44@gmail.com)
 - **Phone**: +91 8813965378
 - **Location**: Yamunanagar, Haryana, India
 - **LinkedIn**: [Nikhil Kamboj](https://www.linkedin.com/in/nikhil-kamboj-632a8b350/)
 - **GitHub**: [nikhil-kamboj420](https://github.com/nikhil-kamboj420)
-
-## 🎓 Education & Experience
-
-- **Current**: BCA 2nd Year, Guru Nanak Khalsa College (Kurukshetra University)
-- **Internship**: Web Development Intern at Unified Mentor (Nov-Dec 2024)
-- **Skills Focus**: MERN Stack, Data Structures & Algorithms (Java)
+- **LeetCode**: [nikhil-kamboj420](https://leetcode.com/u/nikhil-kamboj420/)
 
 ## 🏆 Achievements
 
-- **Web Development Internship Certificate** (Unified Mentor)
-- **Frontend Technology Certificates** (Cutshort, Great Learning)
-- **Class 10**: 92% score (HBSE Board)
-- **5+ Projects Completed** with modern technologies
+- **LeetCode 100 Days Badge** - 2026
+- **LeetCode 50 Days Badge** - 2026
+- **GNK-JAI Scholarship Award** - 2026
+- **Web Development Internship Certificate** - Unified Mentor
+
+## 📊 DSA / Problem Solving
+
+- **128+ LeetCode problems solved** in Java
+- **Topics**: Arrays (72+), Hash Table (26+), Binary Search (18+), Dynamic Programming (8+), Trees (16+), Stack (26+)
+- Language: Java
+
+## 🎓 Education
+
+- **BCA 2nd Year** - Guru Nanak Khalsa College, Kurukshetra University
+- **Expected CGPA**: 8.2/10
 
 ## 🔧 Available Scripts
 
@@ -197,7 +198,7 @@ The portfolio is optimized for deployment on:
 
 ## 🤝 Contributing
 
-This is a personal portfolio project, but feel free to:
+This is a personal portfolio project. Feel free to:
 - Report bugs or issues
 - Suggest improvements
 - Fork and customize for your own use
@@ -213,7 +214,5 @@ This project is open source and available under the [MIT License](LICENSE).
 **Built with ❤️ using React & Tailwind CSS**
 
 ⭐ Star this repo if you found it helpful!
-
-[⬆ Back to Top](#-nikhil-kamboj---mern-stack-developer-portfolio)
 
 </div>

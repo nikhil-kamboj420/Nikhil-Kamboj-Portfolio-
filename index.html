@@ -1,13 +1,228 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- =========================================================
+         BASIC DOCUMENT META
+    ========================================================== -->
+
     <meta charset="UTF-8" />
-    <link rel="icon" type="image" href="/myimage.JPEG" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nikhil Kamboj - MERN Stack Developer</title>
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <title>Nikhil Kamboj - MERN Stack Developer Portfolio</title>
+
+    <meta
+      name="description"
+      content="Nikhil Kamboj is a MERN Stack Developer building modern full-stack applications with React, Node.js, Express, MongoDB, real-time communication, and AI integrations."
+    />
+
+    <!-- =========================================================
+         SEARCH ENGINE CRAWLING & INDEXING
+    ========================================================== -->
+
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
+    <meta
+      name="googlebot"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
+    <!-- Preferred URL -->
+    <link
+      rel="canonical"
+      href="https://nikhil-kamboj-portfolio.vercel.app/"
+    />
+
+    <!-- =========================================================
+         FAVICON
+    ========================================================== -->
+
+    <link
+      rel="icon"
+      type="image/jpeg"
+      href="/myimage.JPEG"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      href="/myimage.JPEG"
+    />
+
+    <!-- =========================================================
+         OPEN GRAPH - FACEBOOK / LINKEDIN / SOCIAL SHARING
+    ========================================================== -->
+
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:title"
+      content="Nikhil Kamboj - MERN Stack Developer"
+    />
+
+    <meta
+      property="og:description"
+      content="MERN Stack Developer specializing in full-stack applications, real-time communication, and AI integration."
+    />
+
+    <meta
+      property="og:url"
+      content="https://nikhil-kamboj-portfolio.vercel.app/"
+    />
+
+    <meta
+      property="og:site_name"
+      content="Nikhil Kamboj Portfolio"
+    />
+
+    <meta
+      property="og:image"
+      content="https://avatars.githubusercontent.com/u/147230269?v=4"
+    />
+
+    <meta
+      property="og:image:alt"
+      content="Nikhil Kamboj - MERN Stack Developer"
+    />
+
+    <!-- =========================================================
+         TWITTER / X
+    ========================================================== -->
+
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:title"
+      content="Nikhil Kamboj - MERN Stack Developer"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Building modern full-stack applications with React, Node.js, Express, MongoDB, real-time communication, and AI."
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://avatars.githubusercontent.com/u/147230269?v=4"
+    />
+
+    <meta
+      name="twitter:image:alt"
+      content="Nikhil Kamboj - MERN Stack Developer"
+    />
+
+    <!-- =========================================================
+         PERFORMANCE - GOOGLE FONTS
+    ========================================================== -->
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- =========================================================
+         STRUCTURED DATA - PROFILE PAGE
+         Helps search engines understand this page represents
+         a professional person/profile.
+    ========================================================== -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "@id": "https://nikhil-kamboj-portfolio.vercel.app/#profile",
+        "url": "https://nikhil-kamboj-portfolio.vercel.app/",
+        "name": "Nikhil Kamboj - MERN Stack Developer Portfolio",
+        "description": "Professional portfolio of Nikhil Kamboj, a MERN Stack Developer specializing in modern full-stack web applications, real-time communication, and AI integrations.",
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://nikhil-kamboj-portfolio.vercel.app/#person",
+          "name": "Nikhil Kamboj",
+          "url": "https://nikhil-kamboj-portfolio.vercel.app/",
+          "image": "https://avatars.githubusercontent.com/u/147230269?v=4",
+          "jobTitle": "MERN Stack Developer",
+          "description": "MERN Stack Developer building modern full-stack applications with React, Node.js, Express, MongoDB, real-time communication, and AI integrations.",
+          "sameAs": [
+            "https://github.com/nikhil-kamboj420",
+            "https://www.linkedin.com/in/nikhil-kamboj-632a8b350/"
+          ],
+          "knowsAbout": [
+            "MERN Stack",
+            "Full Stack Development",
+            "JavaScript",
+            "React",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "HTML",
+            "CSS",
+            "Tailwind CSS",
+            "REST APIs",
+            "Real-Time Applications",
+            "WebSocket",
+            "AI Integration",
+            "Git",
+            "GitHub",
+            "Responsive Web Design"
+          ]
+        }
+      }
+    </script>
+
+    <!-- =========================================================
+         STRUCTURED DATA - WEBSITE
+    ========================================================== -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://nikhil-kamboj-portfolio.vercel.app/#website",
+        "name": "Nikhil Kamboj Portfolio",
+        "url": "https://nikhil-kamboj-portfolio.vercel.app/",
+        "description": "Portfolio website of Nikhil Kamboj, MERN Stack Developer.",
+        "publisher": {
+          "@id": "https://nikhil-kamboj-portfolio.vercel.app/#person"
+        }
+      }
+    </script>
   </head>
+
   <body>
+    <!-- =========================================================
+         APPLICATION ROOT
+    ========================================================== -->
+
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- =========================================================
+         REACT / VITE ENTRY POINT
+    ========================================================== -->
+
+    <script
+      type="module"
+      src="/src/main.jsx"
+    ></script>
   </body>
 </html>

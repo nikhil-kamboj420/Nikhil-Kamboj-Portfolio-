@@ -1,78 +1,85 @@
-import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import SectionHeader from "./SectionHeader";
 
-const Experience = () => {
-  const experiences = [
-    {
-      role: 'Web Development Intern',
-      company: 'Unified Mentor',
-      type: 'Remote',
-      period: 'Nov 2024 - Dec 2024',
-      description: 'Gained hands-on experience in frontend and real-time application development.',
-      responsibilities: [
-        'Built a responsive portfolio website to showcase skills and projects',
-        'Developed a real-time chat application using Socket.IO',
-        'Implemented backend support via AI tools',
-        'Enhanced frontend development skills through practical projects',
-      ],
-    },
-  ];
+const ENTRIES = [
+  {
+    when: "Nov 2024 – Dec 2024",
+    role: "Full Stack Web Development Intern",
+    org: "Unified Mentor",
+    points: [
+      "Selected and built two of 15+ available projects — a responsive portfolio site (minor) and a real-time chat application (major)",
+      "Developed and deployed a fully responsive portfolio site with hero, education, projects, and contact sections on GitHub Pages",
+      "Built a foundational chat frontend (signup, room-entry, chat pages) and explored Node.js / Express / Socket.io backend integration, deployed on Vercel",
+      "Maintained consistent daily GitHub commits for 30 consecutive days",
+    ],
+  },
+  {
+    when: "2024 – 2027 (Expected)",
+    role: "Bachelor of Computer Applications (BCA)",
+    org: "Guru Nanak Khalsa College, Yamunanagar — Kurukshetra University",
+    points: ["CGPA: 8.2 / 10"],
+  },
+  {
+    when: "CBSE",
+    role: "12th Standard",
+    org: "Govt. Model Sr. Sec. School, Camp, Yamunanagar",
+    points: [],
+  },
+  {
+    when: "HBSE",
+    role: "10th Standard",
+    org: "New Rama Krishna Public School",
+    points: [],
+  },
+];
 
+export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            Work <span className="text-cyan-400">Experience</span>
-          </h2>
-          <div className="w-20 h-1 bg-cyan-400 mx-auto rounded-full"></div>
-        </div>
+    <section
+      id="experience"
+      className="bg-[var(--color-surface)]/40 border-y border-[var(--color-border)]"
+    >
+      <div className="max-w-6xl mx-auto px-5 md:px-8 py-24 scroll-mt-14">
+        <SectionHeader
+          path="~/nikhil/experience.jsx"
+          title="Experience & Education"
+          comment="git log --graph --oneline"
+        />
 
-        <div className="max-w-4xl mx-auto">
-          {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className="relative pl-8 pb-12 border-l-2 border-cyan-500/30 last:pb-0 group hover:border-cyan-500 transition-colors duration-300"
-            >
-              <div className="absolute -left-3 top-0 w-6 h-6 bg-cyan-500 rounded-full border-4 border-slate-900 group-hover:scale-125 transition-transform duration-300"></div>
-
-              <div className="bg-slate-800/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 transform hover:-translate-y-1">
-                <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{exp.role}</h3>
-                    <div className="flex items-center gap-2 text-cyan-400 mb-2">
-                      <Briefcase size={18} />
-                      <span className="font-semibold">{exp.company}</span>
-                    </div>
-                  </div>
-                  <div className="space-y-2 text-right">
-                    <div className="flex items-center gap-2 text-gray-400">
-                      <Calendar size={16} />
-                      <span className="text-sm">{exp.period}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-gray-400">
-                      <MapPin size={16} />
-                      <span className="text-sm">{exp.type}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <p className="text-gray-300 mb-4">{exp.description}</p>
-
-                <ul className="space-y-2">
-                  {exp.responsibilities.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3 text-gray-400">
-                      <span className="text-cyan-400 mt-1">▹</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+        <div className="relative pl-6">
+          <div className="absolute left-[7px] top-2 bottom-2 w-px bg-[var(--color-border)]" />
+          <div className="space-y-10">
+            {ENTRIES.map((e, i) => (
+              <div key={i} className="relative">
+                <span className="absolute -left-6 top-1.5 w-3.5 h-3.5 rounded-full bg-[var(--color-bg)] border-2 border-[var(--color-cyan)]" />
+                <p className="font-mono text-xs text-[var(--color-amber)]">
+                  {e.when}
+                </p>
+                <h3 className="font-[var(--font-display)] text-lg font-semibold mt-1">
+                  {e.role}
+                </h3>
+                <p className="text-sm text-[var(--color-muted)] mt-0.5">
+                  {e.org}
+                </p>
+                {e.points.length > 0 && (
+                  <ul className="mt-3 space-y-1.5">
+                    {e.points.map((p, j) => (
+                      <li
+                        key={j}
+                        className="flex gap-2 text-sm text-[var(--color-muted)] leading-relaxed"
+                      >
+                        <span className="text-[var(--color-cyan)] shrink-0">
+                          ▸
+                        </span>
+                        <span>{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default Experience;
+}
