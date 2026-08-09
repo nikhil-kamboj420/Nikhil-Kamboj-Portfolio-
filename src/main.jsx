@@ -14,17 +14,7 @@ const queryClient = new QueryClient({
 });
 
 function Root() {
-  const [themeReady, setThemeReady] = useState(false);
-
-  useEffect(() => {
-    initTheme();
-    setThemeReady(true);
-  }, []);
-
-  if (!themeReady) {
-    return null;
-  }
-
+ 
   return (
     <QueryClientProvider client={queryClient}>
       <App />
