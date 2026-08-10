@@ -4,15 +4,28 @@ import SectionHeader from "./SectionHeader";
 const FEATURES = [
   { tag: "auth", label: "JWT authentication with bcrypt password hashing" },
   { tag: "chat", label: "Real-time messaging via Stream Chat SDK" },
-  { tag: "calls", label: "Video / audio calls & screen sharing via Stream Video" },
+  {
+    tag: "calls",
+    label: "Video / audio calls & screen sharing via Stream Video",
+  },
   { tag: "ai", label: "In-app AI chatbot powered by Google Gemini API" },
   { tag: "social", label: "Friends system — send, accept, reject, remove" },
   { tag: "alerts", label: "Real-time in-app notifications" },
 ];
 
 const STACK = [
-  "React", "Vite", "Tailwind CSS", "GSAP", "TanStack Query", "Axios",
-  "Node.js", "Express", "MongoDB", "Stream SDKs", "Gemini API", "JWT",
+  "React",
+  "Vite",
+  "Tailwind CSS",
+  "GSAP",
+  "TanStack Query",
+  "Axios",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Stream SDKs",
+  "Gemini API",
+  "JWT",
 ];
 
 export default function Projects() {
@@ -20,15 +33,24 @@ export default function Projects() {
   const [hasInteracted, setHasInteracted] = useState(false);
 
   return (
-    <section id="projects" className="max-w-6xl mx-auto px-5 md:px-8 py-24 scroll-mt-14">
-      <SectionHeader path="~/nikhil/projects.jsx" title="Featured Project" comment="the flagship build" />
+    <section
+      id="projects"
+      className="max-w-6xl mx-auto px-5 md:px-8 py-24 scroll-mt-14"
+    >
+      <SectionHeader
+        path="~/nikhil/projects.jsx"
+        title="Featured Project"
+        comment="the flagship build"
+      />
 
       <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] overflow-hidden">
         <div className="flex items-center gap-1.5 px-5 py-3 border-b border-[var(--color-border)] bg-[var(--color-surface-2)]">
           <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-rose)]/70" />
           <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-amber)]/70" />
           <span className="w-2.5 h-2.5 rounded-full bg-[var(--color-cyan)]/70" />
-          <span className="ml-3 font-mono text-[11px] text-[var(--color-muted)]">HaveaTalk / README.md</span>
+          <span className="ml-3 font-mono text-[11px] text-[var(--color-muted)]">
+            HaveaTalk / README.md
+          </span>
         </div>
 
         <div className="p-6 sm:p-8">
@@ -38,6 +60,10 @@ export default function Projects() {
                 <img
                   src="/thumbnail haveatalk.png"
                   alt="HaveaTalk thumbnail"
+                  onClick={() => {
+                    setThumbHovered(true);
+                    setHasInteracted(true);
+                  }}
                   onMouseEnter={() => {
                     setThumbHovered(true);
                     setHasInteracted(true);
@@ -49,9 +75,12 @@ export default function Projects() {
                 />
               </div>
               <div>
-                <h3 className="font-[var(--font-display)] text-2xl font-semibold">HaveaTalk</h3>
+                <h3 className="font-[var(--font-display)] text-2xl font-semibold">
+                  HaveaTalk
+                </h3>
                 <p className="text-[var(--color-muted)] mt-1 text-sm">
-                  Real-time chat &amp; video calling platform — 7 core features, ~136 commits, 25+ days.
+                  Real-time chat &amp; video calling platform — 7 core features,
+                  ~136 commits, 25+ days.
                 </p>
               </div>
             </div>
@@ -84,7 +113,9 @@ export default function Projects() {
                 <span className="font-mono text-[10px] uppercase tracking-wider text-[var(--color-amber)] mt-0.5 shrink-0">
                   {f.tag}
                 </span>
-                <span className="text-sm text-[var(--color-text)]">{f.label}</span>
+                <span className="text-sm text-[var(--color-text)]">
+                  {f.label}
+                </span>
               </div>
             ))}
           </div>
@@ -101,9 +132,10 @@ export default function Projects() {
           </div>
 
           <p className="mt-7 text-sm text-[var(--color-muted)] leading-relaxed border-t border-[var(--color-border)] pt-5">
-            Shipped the core product in 25+ days, totaling roughly 5,000–7,000 lines of code, while
-            resolving integration challenges across multiple third-party SDKs, cross-service
-            authentication, and production deployment debugging.
+            Shipped the core product in 25+ days, totaling roughly 5,000–7,000
+            lines of code, while resolving integration challenges across
+            multiple third-party SDKs, cross-service authentication, and
+            production deployment debugging.
           </p>
         </div>
       </div>
