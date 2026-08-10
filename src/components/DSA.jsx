@@ -56,6 +56,18 @@ export default function DSA() {
             problems solved on LeetCode
           </p>
 
+          <a
+            href="https://leetcode.com/u/nikhil-kamboj420"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-md border border-[var(--color-cyan)]/50 bg-[var(--color-cyan)]/10 hover:bg-[var(--color-cyan)]/20 transition cursor-pointer"
+          >
+            <span className="font-mono text-xs text-[var(--color-cyan)] font-medium">
+              View Profile
+            </span>
+            <span className="text-[var(--color-cyan)] text-sm">↗</span>
+          </a>
+
           <div className="flex flex-wrap gap-2 mt-5">
             <span className="font-mono text-[11px] px-2.5 py-1 rounded border border-[var(--color-amber)]/40 text-[var(--color-amber)]">
               100 Days Badge · 2026
