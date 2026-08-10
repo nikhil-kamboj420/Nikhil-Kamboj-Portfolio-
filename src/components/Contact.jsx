@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SectionHeader from "./SectionHeader";
 import ContactModal from "./ContactModal";
 
@@ -25,6 +25,23 @@ const LINKS = [
     href: "https://leetcode.com/u/nikhil-kamboj420",
   },
 ];
+
+function VisitCounter() {
+  const [visits, setVisits] = useState(0);
+
+  useEffect(() => {
+    fetch("https://api.countapi.xyz/hit/nikhil-kamboj-portfolio/visits")
+      .then((res) => res.json())
+      .then((data) => setVisits(data.value ?? 0))
+      .catch(() => {});
+  }, []);
+
+  return (
+    <span className="text-[8px] tabular-nums text-[var(--color-muted)]">
+      {visits.toLocaleString()}
+    </span>
+  );
+}
 
 export default function Contact() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -61,12 +78,12 @@ export default function Contact() {
                 href={l.href}
                 target={l.href.startsWith("http") ? "_blank" : undefined}
                 rel="noreferrer"
-                className="group flex items-center justify-between rounded-md border border-[var(--color-border)] px-4 py-3 hover:border-[var(--color-cyan)]/60 transition"
+                className="group flex flex-col sm:flex-row sm:items-center sm:justify-between rounded-md border border-[var(--color-border)] px-4 py-3 hover:border-[var(--color-cyan)]/60 transition"
               >
                 <span className="font-mono text-xs text-[var(--color-amber)]">
                   {l.label}
                 </span>
-                <span className="text-sm text-[var(--color-text)] group-hover:text-[var(--color-cyan)] transition truncate ml-3">
+                <span className="text-sm text-[var(--color-text)] group-hover:text-[var(--color-cyan)] transition sm:ml-3">
                   {l.value}
                 </span>
               </a>
@@ -74,12 +91,12 @@ export default function Contact() {
 
             <button
               onClick={() => setIsModalOpen(true)}
-              className="group flex items-center justify-between rounded-md border border-[var(--color-border)] px-4 py-3 hover:border-[var(--color-cyan)]/60 transition bg-[var(--color-surface)] hover:bg-[var(--color-surface-2)]/50 cursor-pointer"
+              className="group flex flex-col sm:flex-row sm:items-center sm:justify-between rounded-md border border-[var(--color-border)] px-4 py-3 hover:border-[var(--color-cyan)]/60 transition bg-[var(--color-surface)] hover:bg-[var(--color-surface-2)]/50 cursor-pointer"
             >
               <span className="font-mono text-xs text-[var(--color-amber)]">
                 Message
               </span>
-              <span className="text-sm text-[var(--color-text)] group-hover:text-[var(--color-cyan)] transition">
+              <span className="text-sm text-[var(--color-text)] group-hover:text-[var(--color-cyan)] transition sm:ml-3">
                 Send instant message →
               </span>
             </button>
@@ -87,12 +104,15 @@ export default function Contact() {
         </div>
       </div>
 
-      <footer className="mt-16 pt-8 border-t border-[var(--color-border)] flex flex-col sm:flex-row justify-between gap-3 font-mono text-xs text-[var(--color-muted)]">
-        <span>
+      <footer className="mt-16 pt-8 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-center gap-3 font-mono text-xs text-[var(--color-muted)]">
+        <span className="sm:flex-1 text-left">
           © {new Date().getFullYear()} Nikhil Kamboj. Built with React +
           Tailwind CSS.
         </span>
-        <span>Yamunanagar, Haryana, India</span>
+        <VisitCounter />
+        <span className="sm:flex-1 text-right">
+          Yamunanagar, Haryana, India
+        </span>
       </footer>
 
       <ContactModal
