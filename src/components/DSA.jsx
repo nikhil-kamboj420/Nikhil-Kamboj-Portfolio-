@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import SectionHeader from "./SectionHeader";
 
 const TOPICS = [
@@ -36,6 +37,9 @@ const LEVELS = [
 ];
 
 export default function DSA() {
+  const [badgeHovered, setBadgeHovered] = useState(false);
+  const [badgeSrc, setBadgeSrc] = useState(null);
+
   return (
     <section
       id="dsa"
@@ -68,13 +72,35 @@ export default function DSA() {
             <span className="text-[var(--color-cyan)] text-sm">↗</span>
           </a>
 
-          <div className="flex flex-wrap gap-2 mt-5">
-            <span className="font-mono text-[11px] px-2.5 py-1 rounded border border-[var(--color-amber)]/40 text-[var(--color-amber)]">
-              100 Days Badge · 2026
-            </span>
-            <span className="font-mono text-[11px] px-2.5 py-1 rounded border border-[var(--color-amber)]/40 text-[var(--color-amber)]">
-              50 Days Badge · 2026
-            </span>
+          <div className="flex flex-wrap gap-3 mt-5">
+            {[
+              { src: "/100days.png", alt: "100 Days Badge 2026" },
+              { src: "/50days.png", alt: "50 Days Badge 2026" },
+            ].map((badge) => (
+              <div
+                key={badge.src}
+                onMouseEnter={() => {
+                  setBadgeHovered(true);
+                  setBadgeSrc(badge.src);
+                }}
+                onMouseLeave={() => setBadgeHovered(false)}
+                onClick={() => {
+                  setBadgeHovered(true);
+                  setBadgeSrc(badge.src);
+                }}
+                className="relative inline-block cursor-pointer"
+              >
+                <img
+                  src={badge.src}
+                  alt={badge.alt}
+                  className={`w-16 h-16 object-contain rounded-md border border-[var(--color-amber)]/30 shadow-md shadow-[var(--color-amber)]/10 transition-all duration-300 ease-out cursor-pointer ${
+                    badgeHovered && badgeSrc === badge.src
+                      ? "scale-110 shadow-lg shadow-[var(--color-amber)]/30"
+                      : "scale-100"
+                  }`}
+                />
+              </div>
+            ))}
           </div>
 
           <p className="font-mono text-xs text-[var(--color-muted)] mt-6 mb-2">
@@ -116,6 +142,26 @@ export default function DSA() {
           </div>
         </div>
       </div>
+
+      {badgeHovered && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+          onMouseEnter={() => setBadgeHovered(true)}
+          onMouseLeave={() => setBadgeHovered(false)}
+        >
+          <button
+            onClick={() => setBadgeHovered(false)}
+            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface border border-border text-text hover:text-cyan flex items-center justify-center text-lg z-50 cursor-pointer"
+          >
+            ✕
+          </button>
+          <img
+            src={badgeSrc}
+            alt="Badge preview"
+            className="max-w-[90vw] max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-2xl border border-border animate-scale-in"
+          />
+        </div>
+      )}
     </section>
   );
 }
