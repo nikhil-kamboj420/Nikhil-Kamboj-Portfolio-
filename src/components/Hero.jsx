@@ -62,7 +62,7 @@ export default function Hero() {
             Nikhil Kamboj
           </h1>
           <div className="mt-4 h-8 font-mono text-base sm:text-lg text-[var(--color-muted)]">
-            <span className="text-[var(--color-text)]">{typed}</span>
+            <span className="text-text">{typed}</span>
             <span className="animate-blink text-[var(--color-cyan)]">|</span>
           </div>
           <p className="mt-6 text-[var(--color-muted)] max-w-lg leading-relaxed">
@@ -88,7 +88,7 @@ export default function Hero() {
                href="/Nikhil_Kamboj_Resume.pdf"
                target="_blank"
                rel="noreferrer"
-               className="px-5 py-2.5 rounded-md border border-[var(--color-border)] text-sm font-medium hover:border-[var(--color-amber)]/60 hover:text-[var(--color-amber)] transition"
+               className="px-5 py-2.5 rounded-md border border-border text-sm font-medium hover:border-[var(--color-amber)]/60 hover:text-[var(--color-amber)] transition"
              >
                View Resume
              </a>
@@ -100,7 +100,7 @@ export default function Hero() {
                    .getElementById("contact")
                    ?.scrollIntoView({ behavior: "smooth" });
                }}
-               className="px-5 py-2.5 rounded-md border border-[var(--color-border)] text-sm font-medium hover:border-[var(--color-cyan)]/60 hover:text-[var(--color-cyan)] transition"
+               className="px-5 py-2.5 rounded-md border border-border text-sm font-medium hover:border-[var(--color-cyan)]/60 hover:text-cyan transition"
              >
                Get in Touch
              </a>
@@ -111,7 +111,7 @@ export default function Hero() {
               href="https://github.com/nikhil-kamboj420"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[var(--color-cyan)] transition"
+              className="hover:text-cyan transition"
             >
               github
             </a>
@@ -120,7 +120,7 @@ export default function Hero() {
               href="https://linkedin.com/in/nikhil-kamboj6969"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[var(--color-cyan)] transition"
+              className="hover:text-cyan transition"
             >
               linkedin
             </a>
@@ -129,7 +129,7 @@ export default function Hero() {
               href="https://leetcode.com/u/nikhil-kamboj420"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[var(--color-cyan)] transition"
+              className="hover:text-cyan transition"
             >
               leetcode
             </a>
@@ -137,8 +137,8 @@ export default function Hero() {
         </div>
 
         <div className="md:hidden relative h-64 mb-8">
-          <div className="absolute inset-0 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/40 backdrop-blur-sm overflow-hidden">
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-surface-2)]">
+          <div className="absolute inset-0 rounded-lg border border-border bg-surface/40 backdrop-blur-sm overflow-hidden">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-[var(--color-surface-2)]">
               <span className="w-3 h-3 rounded-full bg-[var(--color-rose)]/70" />
               <span className="w-3 h-3 rounded-full bg-[var(--color-amber)]/70" />
               <span className="w-3 h-3 rounded-full bg-[var(--color-cyan)]/70" />
@@ -159,7 +159,7 @@ export default function Hero() {
                   className="relative inline-block"
                 >
                   <img
-                    src="/myimage.JPEG"
+                    src="/me.png"
                     alt="Nikhil Kamboj"
                     className={`w-16 h-16 rounded-full object-cover border-2 border-[var(--color-cyan)]/40 shadow-lg shadow-[var(--color-cyan)]/10 transition-all duration-300 ease-out cursor-pointer ${
                       profileHovered ? "opacity-0 scale-150" : "opacity-100 scale-100"
@@ -170,16 +170,16 @@ export default function Hero() {
               <div>
                 <span className="text-[var(--color-amber)]">interface</span>{" "}
                 <span className="text-[var(--color-cyan)]">Developer</span>{" "}
-                <span className="text-[var(--color-text)]">{`{`}</span>
+                <span className="text-text">{`{`}</span>
               </div>
               <div className="pl-3">
-                <span className="text-[var(--color-text)]">name:</span>{" "}
+                <span className="text-text">name:</span>{" "}
                 <span className="text-[var(--color-amber)]">
                   "Nikhil Kamboj"
                 </span>
               </div>
               <div className="pl-3">
-                <span className="text-[var(--color-text)]">stack:</span>{" "}
+                <span className="text-text">stack:</span>{" "}
                 <span className="text-[var(--color-amber)]">[</span>
                 <span className="text-[var(--color-cyan)]">"React"</span>,{" "}
                 <span className="text-[var(--color-cyan)]">"Node"</span>,{" "}
@@ -187,26 +187,26 @@ export default function Hero() {
                 <span className="text-[var(--color-amber)]">]</span>
               </div>
               <div className="pl-3">
-                <span className="text-[var(--color-text)]">dsa:</span>{" "}
+                <span className="text-text">dsa:</span>{" "}
                 <span className="text-[var(--color-amber)]">150</span>+{" "}
                 <span className="text-[var(--color-muted)]">// LeetCode</span>
               </div>
               <div className="pl-3">
-                <span className="text-[var(--color-text)]">status:</span>{" "}
+                <span className="text-text">status:</span>{" "}
                 <span className="text-[var(--color-cyan)]">
                   "Open to opportunities"
                 </span>
               </div>
               <div>
-                <span className="text-[var(--color-text)]">{`}`}</span>
+                <span className="text-text">{`}`}</span>
               </div>
             </div>
           </div>
         </div>
 
         <div className="hidden md:block relative h-96">
-          <div className="absolute inset-0 rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]/40 backdrop-blur-sm overflow-hidden">
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-surface-2)]">
+          <div className="absolute inset-0 rounded-lg border border-border bg-surface/40 backdrop-blur-sm overflow-hidden">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-border bg-[var(--color-surface-2)]">
               <span className="w-3 h-3 rounded-full bg-[var(--color-rose)]/70" />
               <span className="w-3 h-3 rounded-full bg-[var(--color-amber)]/70" />
               <span className="w-3 h-3 rounded-full bg-[var(--color-cyan)]/70" />
@@ -227,7 +227,7 @@ export default function Hero() {
                   className="relative inline-block"
                 >
                   <img
-                    src="/myimage.JPEG"
+                    src="/me.png"
                     alt="Nikhil Kamboj"
                     className={`w-20 h-20 rounded-full object-cover border-2 border-[var(--color-cyan)]/40 shadow-lg shadow-[var(--color-cyan)]/10 transition-all duration-300 ease-out cursor-pointer ${
                       profileHovered ? "opacity-0 scale-150" : "opacity-100 scale-100"
@@ -238,16 +238,16 @@ export default function Hero() {
               <div>
                 <span className="text-[var(--color-amber)]">interface</span>{" "}
                 <span className="text-[var(--color-cyan)]">Developer</span>{" "}
-                <span className="text-[var(--color-text)]">{`{`}</span>
+                <span className="text-text">{`{`}</span>
               </div>
               <div className="pl-4">
-                <span className="text-[var(--color-text)]">name:</span>{" "}
+                <span className="text-text">name:</span>{" "}
                 <span className="text-[var(--color-amber)]">
                   "Nikhil Kamboj"
                 </span>
               </div>
               <div className="pl-4">
-                <span className="text-[var(--color-text)]">stack:</span>{" "}
+                <span className="text-text">stack:</span>{" "}
                 <span className="text-[var(--color-amber)]">[</span>
                 <span className="text-[var(--color-cyan)]">"React"</span>,{" "}
                 <span className="text-[var(--color-cyan)]">"Node"</span>,{" "}
@@ -255,18 +255,18 @@ export default function Hero() {
                 <span className="text-[var(--color-amber)]">]</span>
               </div>
               <div className="pl-4">
-                <span className="text-[var(--color-text)]">dsa:</span>{" "}
+                <span className="text-text">dsa:</span>{" "}
                 <span className="text-[var(--color-amber)]">150</span>+{" "}
                 <span className="text-[var(--color-muted)]">// LeetCode</span>
               </div>
               <div className="pl-4">
-                <span className="text-[var(--color-text)]">status:</span>{" "}
+                <span className="text-text">status:</span>{" "}
                 <span className="text-[var(--color-cyan)]">
                   "Open to opportunities"
                 </span>
               </div>
               <div>
-                <span className="text-[var(--color-text)]">{`}`}</span>
+                <span className="text-text">{`}`}</span>
               </div>
             </div>
           </div>
@@ -285,14 +285,14 @@ export default function Hero() {
               e.stopPropagation()
               setProfileHovered(false)
             }}
-            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-text)] hover:text-[var(--color-cyan)] flex items-center justify-center text-lg z-50"
+            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface border border-border text-text hover:text-cyan flex items-center justify-center text-lg z-50"
           >
             ✕
           </button>
           <img
-            src="/myimage.JPEG"
+            src="/me.png"
             alt="Nikhil Kamboj"
-            className="max-w-[90vw] max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-2xl border border-[var(--color-border)]"
+            className="max-w-[90vw] max-h-[90vh] w-auto h-auto object-contain rounded-lg shadow-2xl border border-border"
           />
         </div>
       )}
