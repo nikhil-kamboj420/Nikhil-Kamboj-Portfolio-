@@ -43,7 +43,7 @@ export default function Projects() {
                     setHasInteracted(true);
                   }}
                   onMouseLeave={() => setThumbHovered(false)}
-                  className={`w-12 h-12 rounded-lg object-cover border border-[var(--color-border)] transition-all duration-300 ease-out cursor-pointer ${
+                  className={`w-40 h-20 rounded-lg object-cover border border-[var(--color-border)] transition-all duration-300 ease-out cursor-pointer ${
                     !hasInteracted ? "animate-glow-pulse" : ""
                   }`}
                 />
