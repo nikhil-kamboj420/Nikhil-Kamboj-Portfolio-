@@ -30,9 +30,9 @@ function VisitCounter() {
   const [visits, setVisits] = useState(0);
 
   useEffect(() => {
-    fetch("https://api.countapi.xyz/hit/nikhil-kamboj-portfolio/visits")
+    fetch("https://countapi.mileshilliard.com/api/v1/hit/nikhil-kamboj-portfolio-visits")
       .then((res) => res.json())
-      .then((data) => setVisits(data.value ?? 0))
+      .then((data) => setVisits(Number(data.value ?? 0)))
       .catch(() => {});
   }, []);
 
