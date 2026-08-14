@@ -1,153 +1,96 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- =========================================================
+
+<head>
+  <!-- =========================================================
          BASIC DOCUMENT META
     ========================================================== -->
 
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="theme-color" content="#0a0a0a" />
+  <meta name="theme-color" content="#0a0a0a" />
 
-    <title>Nikhil Kamboj - MERN Stack Developer Portfolio</title>
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="L1St9jC4SfW_rbxGY3-K003Ya5pqhOIz-W05LOw_e_E" />
 
-    <meta
-      name="description"
-      content="Nikhil Kamboj is a MERN Stack Developer building modern full-stack applications with React, Node.js, Express, MongoDB, real-time communication, and AI integrations."
-    />
+  <title>Nikhil Kamboj - MERN Stack Developer Portfolio</title>
 
-    <!-- =========================================================
+  <meta name="description"
+    content="Nikhil Kamboj is a MERN Stack Developer building modern full-stack applications with React, Node.js, Express, MongoDB, real-time communication, and AI integrations." />
+
+  <!-- =========================================================
          SEARCH ENGINE CRAWLING & INDEXING
     ========================================================== -->
 
-    <meta
-      name="robots"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <meta
-      name="googlebot"
-      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    />
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-    <!-- Preferred URL -->
-    <link
-      rel="canonical"
-      href="https://nikhil-kamboj-portfolio.vercel.app/"
-    />
+  <!-- Preferred URL -->
+  <link rel="canonical" href="https://nikhil-kamboj-portfolio.vercel.app/" />
 
-    <!-- =========================================================
+  <!-- =========================================================
          FAVICON
     ========================================================== -->
-<link rel="icon" type="image/png" href="/me.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/me.png"
-    />
+  <link rel="icon" type="image/png" href="/me.png" />
 
-    <link
-      rel="apple-touch-icon"
-      href="/me.png"
-    />
+  <link rel="apple-touch-icon" href="/me.png" />
 
-    <!-- =========================================================
+  <!-- =========================================================
          OPEN GRAPH - FACEBOOK / LINKEDIN / SOCIAL SHARING
     ========================================================== -->
 
-    <meta property="og:type" content="website" />
+  <meta property="og:type" content="website" />
 
-    <meta
-      property="og:title"
-      content="Nikhil Kamboj - MERN Stack Developer"
-    />
+  <meta property="og:title" content="Nikhil Kamboj - MERN Stack Developer" />
 
-    <meta
-      property="og:description"
-      content="MERN Stack Developer specializing in full-stack applications, real-time communication, and AI integration."
-    />
+  <meta property="og:description"
+    content="MERN Stack Developer specializing in full-stack applications, real-time communication, and AI integration." />
 
-    <meta
-      property="og:url"
-      content="https://nikhil-kamboj-portfolio.vercel.app/"
-    />
+  <meta property="og:url" content="https://nikhil-kamboj-portfolio.vercel.app/" />
 
-    <meta
-      property="og:site_name"
-      content="Nikhil Kamboj Portfolio"
-    />
+  <meta property="og:site_name" content="Nikhil Kamboj Portfolio" />
 
-    <meta
-      property="og:image"
-      content="https://avatars.githubusercontent.com/u/147230269?v=4"
-    />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/147230269?v=4" />
 
-    <meta
-      property="og:image:alt"
-      content="Nikhil Kamboj - MERN Stack Developer"
-    />
+  <meta property="og:image:alt" content="Nikhil Kamboj - MERN Stack Developer" />
 
-    <!-- =========================================================
+  <!-- =========================================================
          TWITTER / X
     ========================================================== -->
 
-    <meta
-      name="twitter:card"
-      content="summary_large_image"
-    />
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <meta
-      name="twitter:title"
-      content="Nikhil Kamboj - MERN Stack Developer"
-    />
+  <meta name="twitter:title" content="Nikhil Kamboj - MERN Stack Developer" />
 
-    <meta
-      name="twitter:description"
-      content="Building modern full-stack applications with React, Node.js, Express, MongoDB, real-time communication, and AI."
-    />
+  <meta name="twitter:description"
+    content="Building modern full-stack applications with React, Node.js, Express, MongoDB, real-time communication, and AI." />
 
-    <meta
-      name="twitter:image"
-      content="https://avatars.githubusercontent.com/u/147230269?v=4"
-    />
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/147230269?v=4" />
 
-    <meta
-      name="twitter:image:alt"
-      content="Nikhil Kamboj - MERN Stack Developer"
-    />
+  <meta name="twitter:image:alt" content="Nikhil Kamboj - MERN Stack Developer" />
 
-    <!-- =========================================================
+  <!-- =========================================================
          PERFORMANCE - GOOGLE FONTS
     ========================================================== -->
 
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
 
-    <!-- =========================================================
+  <!-- =========================================================
          STRUCTURED DATA - PROFILE PAGE
          Helps search engines understand this page represents
          a professional person/profile.
     ========================================================== -->
 
-    <script type="application/ld+json">
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "ProfilePage",
@@ -190,11 +133,11 @@
       }
     </script>
 
-    <!-- =========================================================
+  <!-- =========================================================
          STRUCTURED DATA - WEBSITE
     ========================================================== -->
 
-    <script type="application/ld+json">
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
@@ -207,22 +150,20 @@
         }
       }
     </script>
-  </head>
+</head>
 
-  <body>
-    <!-- =========================================================
+<body>
+  <!-- =========================================================
          APPLICATION ROOT
     ========================================================== -->
 
-    <div id="root"></div>
+  <div id="root"></div>
 
-    <!-- =========================================================
+  <!-- =========================================================
          REACT / VITE ENTRY POINT
     ========================================================== -->
 
-    <script
-      type="module"
-      src="/src/main.jsx"
-    ></script>
-  </body>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
