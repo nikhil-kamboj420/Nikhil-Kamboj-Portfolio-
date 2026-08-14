@@ -157,7 +157,7 @@ nikhil-kamboj-portfolio/
 - **Email**: [kambojnikhil44@gmail.com](mailto:kambojnikhil44@gmail.com)
 - **Phone**: +91 8813965378
 - **Location**: Yamunanagar, Haryana, India
-- **LinkedIn**: [Nikhil Kamboj](https://www.linkedin.com/in/nikhil-kamboj-632a8b350/)
+- **LinkedIn**: [Nikhil Kamboj](https://www.linkedin.com/in/nikhil-kamboj6969/)
 - **GitHub**: [nikhil-kamboj420](https://github.com/nikhil-kamboj420)
 - **LeetCode**: [nikhil-kamboj420](https://leetcode.com/u/nikhil-kamboj420/)
 
